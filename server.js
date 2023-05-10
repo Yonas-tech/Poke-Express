@@ -36,20 +36,18 @@ app.get('/pokemon/new',(req,res)=>{
     res.render('New');
 })
 
-
 app.get('/pokemon/:id', (req,res)=>{
     // res.send(req.params.id)
     res.render('Show',{pokemon: pokemon[req.params.id]})
 })
 
-
 // POST:
 app.post('/pokemon', (req, res)=>{
     pokemon.push(req.body);
     console.log(pokemon)
+    res.redirect('/pokemon')
 })
-
-
+ 
 // set your app to listen to the port and include a console.log(), so that you can tell when your server is running
 app.listen(port, ()=>{
     console.log(`Server is listening on port ${port}`)

@@ -29,7 +29,9 @@ export class Index extends Component {
             )
             })}
         </ul>
-       
+       <nav>
+        <a href="/pokemon/new">Add A New Pokemon</a>
+       </nav>
           
       </div>
     )
