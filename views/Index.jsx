@@ -21,10 +21,10 @@ export class Index extends Component {
       <div style={myStyle}>
         <h1>See All The Pokemon!</h1>
         <ul>
-           {pokemon.map((poke)=>{
+           {pokemon.map((poke, idx)=>{
             return(
               <li>
-                {poke.name.charAt(0).toLocaleUpperCase() + poke.name.slice(1)}
+                <a href={`/pokemon/${idx}`}>{poke.name.charAt(0).toLocaleUpperCase() + poke.name.slice(1)}</a>
               </li>
             )
             })}
