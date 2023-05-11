@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import pokemon from '../models/pokemon';
+// import pokemon from '../models/pokemon';
+import styled from 'styled-components';
 
 export class Index extends Component {
   render() {
@@ -11,26 +12,21 @@ export class Index extends Component {
         padding: 0,
         margin: 0,
         };
-        
-// The name of each pokemon, as a list item, inside an unordered list
-// This list should be dynamically rendered by jsx based on your data from your 'database'
-// You'll notice the pokemon names aren't properly capitalized! Let's fix that! Manipulate the data programatically to capitalize the first letter of their names
-
-
+    
     return (
       <div style={myStyle}>
         <h1>See All The Pokemon!</h1>
         <ul>
-           {pokemon.map((poke, idx)=>{
+           {this.props.pokemon.map((poke, idx)=>{
             return(
-              <li>
-                <a href={`/pokemon/${idx}`}>{poke.name.charAt(0).toLocaleUpperCase() + poke.name.slice(1)}</a>
+              <li key={idx}>
+                <a href={`/pokemon/${poke.id}`}>{poke.name.charAt(0).toLocaleUpperCase() + poke.name.slice(1)}</a>
               </li>
             )
             })}
         </ul>
        <nav>
-        <a href="/pokemon/new">Add A New Pokemon</a>
+          <a href="/pokemon/new"><button>Add A New Pokemon</button></a>
        </nav>
           
       </div>
@@ -39,3 +35,9 @@ export class Index extends Component {
 }
 
 export default Index
+
+
+// const aLink = styled.a
+// `
+
+// `

@@ -5,6 +5,7 @@ export class Show extends Component {
         const imgStyle ={
             maxHeight: '400px',
         }
+        const pokemon = this.props.pokemon;
 
         const showImage = () => {
             if (pokemon.img.split(".").pop().length ===3) {
@@ -14,8 +15,7 @@ export class Show extends Component {
                 return <img style={imgStyle} src={pokemon.img + '.jpg'} alt={pokemon.name} />
             }
         }
-
-        const pokemon = this.props.pokemon;
+        
         return (
             <div>
                 <h1>Gotta Catch 'Em All</h1>

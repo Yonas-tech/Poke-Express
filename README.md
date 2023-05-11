@@ -20,3 +20,11 @@ URL: https://archives.bulbagarden.net/media/upload/8/82/0017Pidgeotto.png
 Name: Pidgey
 URL: https://archives.bulbagarden.net/media/upload/0/0c/0016Pidgey.png
 
+## Part 2 with Pokedex
+
+Add Model for pokemon
+Rewrite Index Route to use Mongodb
+Rewrite Index View to work with Index Route
+Rewrite Show Route to MongoDB
+Rewrite Create Route to work with MongoDB
+Use New Page to create all the pokemon that were in the original array at minimum
